@@ -5,11 +5,13 @@
   "main": "index.ts",
   "scripts": {
     "test": "jest",
-    "start": "tsc-node src/index.ts",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
+    "start": "node dist/index.js",
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts",
     "eslint": "eslint",
     "tsc": "tsc",
-    "jest": "jest"
+    "jest": "jest",
+    "babel": "babel"
   },
   "keywords": [
     "course",
@@ -18,20 +20,23 @@
   "author": "Gustavo Figueiredo",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^27.4.0",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^8.7.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.4",
     "jest": "^27.4.7",
+    "ts-jest": "^27.1.3",
     "ts-node-dev": "^1.1.8",
     "tsconfig-paths": "^3.12.0",
     "typescript": "^4.5.5"
-  },
-  "dependencies": {
-    "D": "^1.0.0",
-    "ts-jest": "^27.1.3"
   }
 }
