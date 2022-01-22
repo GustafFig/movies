@@ -1,0 +1,8 @@
+# language files
+node_modules
+
+# IDEs config
+.vscode/
+
+# Production build
+dist
