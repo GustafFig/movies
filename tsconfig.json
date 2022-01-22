@@ -1,14 +1,9 @@
 {
   "compilerOptions": {
-		/* Visit https://aka.ms/tsconfig.json to read more about this file */
-
-		/* Language and Environment */
     "target": "es2017",
     "lib": ["ES6"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-
-		/* Modules */
     "module": "commonjs",
     "rootDir": "./src",
     "typeRoots": [
@@ -16,28 +11,21 @@
 			"./src/@types"
 		],
     "resolveJsonModule": true,
-
-		/* JavaScript Support */
     "allowJs": true,
-
-		/* Emit */
     "outDir": "./dist",
     "esModuleInterop": true,
-
-		/* Interop Constraints */
     "forceConsistentCasingInFileNames": true,
     "strict": false,
-
-		/* Type Checking */
     "skipLibCheck": true,
-
-		/* paths */
-		"baseUrl": "./src/",
+		"baseUrl": ".",
 		"paths": {
-			"@controllers/*": ["./controllers/*"],
-			"@services/*": ["./services/*"],
-			"@models/*": ["./models/*"],
-			"@utils/*": ["./utils/*"]
+			"@controllers/*": ["./src/controllers/*"],
+			"@services/*": ["./src/services/*"],
+			"@models/*": ["./src/models/*"],
+			"@utils/*": ["./src/utils/*"]
 		}
-  }
+  },
+	"include": [
+		"./src/**/*"
+	],
 }
