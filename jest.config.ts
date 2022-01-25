@@ -3,7 +3,7 @@
  * https://jestjs.io/docs/configuration
  */
 
-import { pathsToModuleNameMapper } from 'ts-jest/utils';
+import { pathsToModuleNameMapper } from 'ts-jest';
 import { compilerOptions } from './tsconfig.json';
 
 export default {
@@ -13,7 +13,7 @@ export default {
   // Stop running tests after `n` failures
   // bail: 0,
 
-  // The directory where Jest should store its cached dependency information
+  // The directory wherae Jest should store its cached dependency information
   // cacheDirectory: "/tmp/jest_rs",
 
   // Automatically clear mock calls, instances and results before every test
